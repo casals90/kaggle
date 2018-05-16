@@ -6,7 +6,7 @@ The aim of this repository it to store the codes and results about Kaggle compet
 
 ### Titanic: Machine Learning from Disaster ###
 
-* Data
+* <h3>Data<h3>
 	The data has been split into two groups:
 
 	training set (train.csv)
