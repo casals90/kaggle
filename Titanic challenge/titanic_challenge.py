@@ -62,7 +62,7 @@ if __name__ == "__main__":
     ###################
     ### Grid search ###
     ###################
-    """
+    
     tuned_parameters = [{'kernel': ['linear', 'rbf'], 'C': [0.1, 1, 10, 100, 1000]}]
     scores = ['precision', 'recall']
     
@@ -90,7 +90,7 @@ if __name__ == "__main__":
     
     print(C)
     print(kernel)
-    """
+    
     ############
     ### SVM ###
     ###########
