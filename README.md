@@ -30,18 +30,16 @@ The aim of this repository it to store the codes and results about Kaggle compet
 	Some children travelled only with a nanny, therefore parch=0 for them.</p>
 
 * <h3>Methods</h3>
-	<li>
-		<lu>GridSearch</lu>
-		<lu>SVM</lu>
-		<lu>Random Forest</lu>
-	</li>
+	<p>GridSearch</p>
+	<p>SVM</p>
+	<p>Random Forest</p>
 	
 * <h3>Result</h3>
-	* Training accuracy = 84.91
-	* Testing accuracy = 77.99
+	<p>Training accuracy = 84.91</p>
+	<p>Testing accuracy = 77.99</p>
 
 * <h3>Submission</h3>
-	* Score = 77.99
-	* Position 5466 of 11307
+	<p>Score = 77.99</p>
+	<p>Position 5466 of 11307</p>
 
 
