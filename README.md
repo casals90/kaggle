@@ -45,4 +45,6 @@ The aim of this repository it's to store the codes and results about Kaggle comp
 		Position 5466 of 11307<br>
 	</p>
 
+## Digit Recognizer ##
+
 
