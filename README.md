@@ -1,34 +1,29 @@
 # Kaggle competitions #
 
-### What is this repository for? ###
-
-The aim of this repository it's to store the codes and results about Kaggle competitions.
+The aim of this repository, it's to store the codes and results about Kaggle competitions.
 
 ## Titanic: Machine Learning from Disaster ##
 
 * <h3>Data</h3>
-	<p>The data has been split into two groups training set (train.csv) and test set (test.csv):<br>
-		<br>
-		pclass: A proxy for socio-economic status (SES)<br>
-		1st = Upper<br>
-		2nd = Middle<br>
-		3rd = Lower<br>
-		<br>
-		age: Age is fractional if less than 1. If the age is estimated, is it in the form of xx.5<br>
-		<br>
-		sibsp: The dataset defines family relations in this way...<br>
-		Sibling = brother, sister, stepbrother, stepsister<br>
-		Spouse = husband, wife (mistresses and fiancés were ignored)<br>
-		<br>
-		parch: The dataset defines family relations in this way...<br>
-		Parent = mother, father<br>
-		Child = daughter, son, stepdaughter, stepson<br>
-		Some children travelled only with a nanny, therefore parch=0 for them.<br>
+	<p>
+		The data has been split into two groups training set (train.csv) and test set (test.csv):<br>
+		| Variable | Definition | Key |
+		| --- | --- | --- |
+		| Survival | Survival | 0 = No, 1 = Yes |
+		| Pclass | Ticket class | 1 = 1st, 2 = 2nd, 3 = 3rd |
+		| Sex | Sex | male, famele |
+		| Age | Age in years | |
+		| Sibsp | # of siblings / spouses aboard the Titanic | |
+		| Parch | # of parents / children aboard the Titanic | |
+		| Ticket | Ticket number | |
+		| Fare | Passenger fare | |
+		| Cabin | Cabin number | Cabin number in string or NaN if the passanger didin't has a cabin |
+		| Embarked | Port of Embarkation | C = Cherbourg, Q = Queenstown, S = Southampton |
+		
 	</p>
 
 * <h3>Methods</h3>
 	<p>
-		GridSearch<br>
 		SVM<br>
 		Random Forest<br>
 	</p>
@@ -36,7 +31,7 @@ The aim of this repository it's to store the codes and results about Kaggle comp
 * <h3>Result</h3>
 	<p>
 		Training accuracy = 84.91<br>
-		Testing accuracy = 77.99
+		Testing accuracy = 77.99<br>
 	</p>
 
 * <h3>Submission</h3>
@@ -46,5 +41,3 @@ The aim of this repository it's to store the codes and results about Kaggle comp
 	</p>
 
 ## Digit Recognizer ##
-
-

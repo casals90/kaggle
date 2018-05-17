@@ -103,4 +103,6 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+# adding for me
 */submissions
+.gitignore
