@@ -136,7 +136,7 @@ if __name__ == "__main__":
     
     df_final = pd.DataFrame(data)
     
-    df_final.to_csv("titanic_eval.csv",
+    df_final.to_csv("submissions/titanic_eval.csv",
 				  header=True,
                     sep=',',
                     index=False,
