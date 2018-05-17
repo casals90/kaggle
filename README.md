@@ -7,6 +7,7 @@ The aim of this repository, it's to store the codes and results about Kaggle com
 * <h3>Data</h3>
 	<p>
 		The data has been split into two groups training set (train.csv) and test set (test.csv):<br>
+		
 		| Variable | Definition | Key |
 		| --- | --- | --- |
 		| Survival | Survival | 0 = No, 1 = Yes |
