@@ -9,8 +9,10 @@ Created on Thu May 17 16:55:33 2018
 import keras
 import pandas as pd
 
+from sklearn import svm
 from sklearn.preprocessing import normalize
-from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report
+from sklearn.model_selection import train_test_split, GridSearchCV
 
 from keras.models import Sequential
 from keras.layers import Dense, Dropout
@@ -45,6 +47,15 @@ if __name__ == "__main__":
                            skiprows=[0],
                            low_memory=False)
     
+    print(df_train.shape[0], 'train samples')
+    """
+    ######################
+    ### Neural network ###
+    ######################
+    
+    # This code here is because the input y of NN needs a vector of classes number (10)
+    # but in knn the y is only a label
+    
     # Get labels from column 1
     y_train = df_train[0]
     # Select all colums without 0 (labels)
@@ -52,8 +63,6 @@ if __name__ == "__main__":
     
     X_train = X_train.astype('float32')
     X_train = normalize(X_train, norm='l2')
-    
-    print(X_train.shape[0], 'train samples')
     
     # convert class vectors to binary class matrices
     y_train = keras.utils.to_categorical(y_train, NUM_CLASSES)
@@ -67,10 +76,6 @@ if __name__ == "__main__":
     X_test = pd.read_csv(TEST_DATA,
                          header=None,
                          skiprows=[0])
-    
-    ######################
-    ### Neural network ###
-    ######################
     
     model = Sequential()
     model.add(Dense(512, activation='relu', input_shape=(X_train.shape[1],)))
@@ -115,12 +120,30 @@ if __name__ == "__main__":
                          index=False,
                          encoding='utf-8')
     
-    ###########
-    ### KNN ###
-    ###########
+    """
+    # This code here is because the input y of NN needs a vector of classes number (10)
+    # but in knn the y is only a label
+    
+    # Get labels from column 1
+    y_train = df_train[0]
+    # Select all colums without 0 (labels)
+    X_train = df_train.loc[:, 1:]
+    
+    X_train = X_train.astype('float32')
+    X_train = normalize(X_train, norm='l2')
     
     clf_knn = KNeighborsClassifier(n_neighbors=NUM_CLASSES)
     clf_knn.fit(X_train, y_train)
+    
+    # Split the dataset in train and test
+    X_train, X_validate, y_train, y_validate = train_test_split(X_train, 
+                                                                y_train, 
+                                                                test_size=0.2, 
+                                                                random_state=90)
+    """
+    ###########
+    ### KNN ###
+    ###########
     
     print('#'*10)
     print('Knn:')
@@ -138,4 +161,43 @@ if __name__ == "__main__":
                              sep=',',
                              index=False,
                              encoding='utf-8')
+    
+    """
+    ###################
+    ### Grid search ###
+    ###################
+    
+    tuned_parameters = [{'kernel': ['linear', 'rbf'], 'C': [0.1, 1, 10, 100, 1000]}]
+    scores = ['precision', 'recall']
+    
+    best_params = {}
+
+    for score in scores:
+        clf = GridSearchCV(svm.SVC(), 
+                           tuned_parameters, 
+                           cv=10,scoring='{}_macro'.format(score))
+        clf.fit(X_train, y_train)
+
+        print("Best parameters:")
+        print(clf.best_params_)
+		
+        means = clf.cv_results_['mean_test_score']
+        stds = clf.cv_results_['std_test_score']
+        for mean, std, params in zip(means, stds, clf.cv_results_['params']):
+            print("%0.3f (+/-%0.03f) for %r"% (mean, std * 2, params))
+
+        y_true, y_pred = y_validate, clf.predict(X_validate)
+        print(classification_report(y_true, y_pred))
+
+    C = clf.best_params_['C']
+    kernel = clf.best_params_['kernel']
+    
+    print(C)
+    print(kernel)
+    
+    ###########
+    ### SVM ###
+    ###########
+    
+    
     

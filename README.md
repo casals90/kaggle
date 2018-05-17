@@ -4,6 +4,12 @@ The aim of this repository, it's to store the codes and results about Kaggle com
 
 ## Titanic: Machine Learning from Disaster ##
 
+	<p>The sinking of the RMS Titanic is one of the most infamous shipwrecks in history.  On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships.</p>
+
+	<p>One of the reasons that the shipwreck led to such loss of life was that there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others, such as women, children, and the upper-class.</p>
+
+	<p>In this challenge, we ask you to complete the analysis of what sorts of people were likely to survive. In particular, we ask you to apply the tools of machine learning to predict which passengers survived the tragedy.</p>
+
 * <h3>Data</h3>
 	<p>The data has been split into two groups training set (train.csv) and test set (test.csv):<p>
 	<p>The training set should be used to build your machine learning models. For the training set, we provide the outcome (also known as the “ground truth”) for each passenger. Your model will be based on “features” like passengers’ gender and class. You can also use feature engineering to create new features.</p>
@@ -44,7 +50,7 @@ The aim of this repository, it's to store the codes and results about Kaggle com
 
 <p>
 	MNIST ("Modified National Institute of Standards and Technology") is the de facto “hello world” dataset of computer vision. Since its release in 1999, this classic dataset of handwritten images has served as the basis for benchmarking classification algorithms. As new machine learning techniques emerge, MNIST remains a reliable resource for researchers and learners alike.
-	The goal of the challange is to predict handwritten digits (0 to 9).
+	The goal of this challange is to predict handwritten digits (0 to 9).
 </p>
 
 * <h3>Data</h3>
@@ -59,12 +65,12 @@ The aim of this repository, it's to store the codes and results about Kaggle com
 	| Variable               | Accuracy training | Accuracy test (kaggle submission)|
 	| ---------------------- | ----------------- | -------------------------------- |
 	| Neural network         | 	97.84			 |  95.64       					|
-	| Random Forest          | 	95.52 			 |         					        |
+	| K nearest neighbors    | 	97.36 			 |  97.04    					    |
 
 * <h3>Submission</h3>
 	<p>
-		Score = 95.38<br>
-		Position 1969 of 2504<br>
+		Score = 97.04<br>
+		Position 1570 of 2504<br>
 	</p>
 
 [https://www.kaggle.com/c/digit-recognizer](https://www.kaggle.com/c/digit-recognizer)
