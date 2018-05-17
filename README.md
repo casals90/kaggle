@@ -38,7 +38,7 @@ The aim of this repository, it's to store the codes and results about Kaggle com
 		Position 5466 of 11307<br>
 	</p>
 
-[a link](https://www.kaggle.com/c/titanic)
+[https://www.kaggle.com/c/titanic](https://www.kaggle.com/c/titanic)
 
 ## Digit Recognizer ##
 
@@ -58,13 +58,13 @@ The aim of this repository, it's to store the codes and results about Kaggle com
 
 	| Variable               | Accuracy training | Accuracy test (kaggle submission)|
 	| ---------------------- | ----------------- | -------------------------------- |
-	| Neural network         | 	97.84			 |  95.38       					|
+	| Neural network         | 	97.84			 |  95.64       					|
 	| Random Forest          | 	95.52 			 |         					        |
 
 * <h3>Submission</h3>
 	<p>
 		Score = 95.38<br>
-		Position 1995 of 2504<br>
+		Position 1969 of 2504<br>
 	</p>
 
-[a link](https://www.kaggle.com/c/digit-recognizer)
+[https://www.kaggle.com/c/digit-recognizer](https://www.kaggle.com/c/digit-recognizer)
